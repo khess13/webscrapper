@@ -128,7 +128,8 @@ for file in filesindir:
     for venno,venna,conno in zip(vendorNoList,vendorNameList,contractNoList):
         #TODO - fix contract name, soliciation No
         next_entry = pd.Series([venno,venna,conno,contractNameList,
-                                solicitationNoList[0].strip(),domain+'/'+file],
+                                solicitationNoList[0].strip(),domain
+                                +'/contracts/search?v=/'+file],
                                 index=df.columns)
         df = df.append(next_entry, ignore_index=True)
 
