@@ -124,9 +124,9 @@ for file in filesindir:
     #check for missing values
     if len(solicitationNoList) == 0:
         solicitationNoList = ['N/A']
+
     #make frame
     for venno,venna,conno in zip(vendorNoList,vendorNameList,contractNoList):
-        #TODO - fix contract name, soliciation No
         next_entry = pd.Series([venno,venna,conno,contractNameList,
                                 solicitationNoList[0].strip(),domain
                                 +'/contracts/search?v=/'+file],
